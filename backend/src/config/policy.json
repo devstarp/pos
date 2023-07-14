@@ -1,0 +1,11 @@
+{
+    "name":"",
+    "departments":["PURCHASE","SALE","PRODUCT","ADMIN", "HUMAN_RESOURCES", "GENERAL_AFFAIRS", "RESEARCH&DEVELOPMENT", "IT"],
+    "positions":["MEMBER","MANAGER"],
+    "default_position":"MEMBER",
+    "currencies":["WON", "USD"],
+    "main_currency":"USD",
+    "net_profit":1.2,
+    "payment_type":["CASH","CREDIT_CARD", "DEBIT_CARD", "TRANSFER"],
+    "default_payment_type":"CASH"
+}

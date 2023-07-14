@@ -1,0 +1,10 @@
+.headerContent {
+    height: calc( 100vh - 80px);
+    padding:10px;
+    overflow-y: scroll;
+    /* padding-top: 70px; */
+}
+.noHeaderContent{
+    min-height: 100vh;
+    display: flex;
+}

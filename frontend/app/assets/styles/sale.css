@@ -1,0 +1,315 @@
+/*.sale-menu{*/
+  /*height: 100%;*/
+  /*border: 2px solid #d9d9d9;*/
+  /*!*overflow: fragments;*!*/
+/*}*/
+
+.sale-list{
+    height: 100%;
+    border: 1px solid #d9d9d9;
+    overflow-y: auto;
+    margin-bottom: 5px;
+
+}
+
+.sale-total{
+    height: 100px;
+    margin: 5px 0px;
+    margin-top: 0px;
+    border: 2px solid #d9d9d9;
+    background-color: #f3f3f3;
+    /*background-color: rgb(188, 213, 209);*/
+    /*background-color: rgb(251, 249, 255);*/
+    color: #464b52;
+
+    /*color: #545b62;*/
+    /*color: white;*/
+    /*background: #1f2831;*/
+    /*color: white;*/
+    /*background: #1f2831;*/
+
+    /*font-family: monospace;*/
+    /*display: flex;*/
+    /*align-items: right;*/
+    text-align: right;
+    padding: 10px;
+
+    /*justify-content: space-between;*/
+}
+
+.sale-calculate{
+    margin-top: 5px;
+    display: flex;
+    height: 300px;
+    border-top: 1px solid #d9d9d9;
+}
+
+.sale-header{
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center
+}
+.sale-products{
+    width: 14%;
+    padding: 15px;
+    margin: 1%;
+    position: relative;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+    background: white;
+}
+.sale-products >div> .txt{
+    text-align: center;
+    font-size: 1.2em;
+    /* position: absolute;
+    top: 7px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 60px;
+    left: 7px; */
+    font-weight: bold;
+}
+.sale-products >div> .filter{
+    position: absolute;
+}
+.sale-products:hover >div> .filter{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+.selected{
+    /*background-color: #6fc89a !important;*/
+    background-color: #f2fb96 !important;
+    color: black!important;
+}
+.selected:focus{
+    background-color: #f2fb96!important;
+    /*background-color: #6fc89a!important;*/
+    color: black!important;
+}
+.selected:active{
+    background-color: #f2fb96!important;
+    color: black!important;
+}
+
+.calculate-sale{
+    margin: 1px;
+    border-radius: 0px!important;
+    font-weight: bold!important;
+    font-size: 1.1em!important;
+    padding: 2px!important;
+    height: auto!important;
+    width: 100%;
+    box-shadow: 1px 1px 1px grey!important;
+    /* box-shadow: 2px 2px 3px #888585; */
+    background: #f3f3f3 !important;
+    color:#545b62!important;
+    border: none!important;
+}
+.calculate-sale:hover{
+    color: black!important;
+  /* box-shadow: 2px 2px 3px #5d5d5d; */
+}
+.calculate-sale:active{
+    color: black!important;
+    background: #f2fb96!important;
+}
+.calculate-sale:focus{
+    color: black!important;
+}
+
+.sale-products:hover >div> .filter> div> .icon{
+    background: white;
+    width: 25px!important;
+    height: 25px!important
+
+}
+.sale-selected-row{
+    background-color:#e6f7ff
+}
+.number{
+    background: #f3f3f3!important;
+    font-size: 1.4em!important;
+    border-radius: 0!important;
+    font-weight: bold!important;
+    height: 100%!important;
+    padding: 2%!important;
+    text-align: center;
+    width: 18.8%!important;
+    margin:1px !important;
+    color: #545b62!important;
+    border: none!important;
+    cursor: pointer;
+    box-shadow:  1px 1px 1px grey!important;
+}
+.number:hover{
+    color: black!important;
+}
+.number:active{
+    background-color:  #f2fb96!important;
+    color: black!important
+}
+.number:focus{
+    color: black!important
+}
+.calc-button:hover{
+    color: black!important
+}
+.calc-button:active{
+    background-color: #f2fb96!important;
+    color: black!important
+}
+.calc-button:focus{
+ color: black!important
+}
+
+.not-selected{
+    background: #f3f3f3 !important;
+    color: #464b52;    
+}
+.calc-button{
+    font-size: 1.1em!important;
+    font-weight: bold!important;
+    padding: 2%!important;
+    text-align: center!important;
+    width: 38.7%!important;
+    height: 100%!important;
+    margin: 1px;
+    border-radius: 0px!important;
+    border: none!important;
+    box-shadow:  1px 1px 1px grey!important;
+}
+/*
+lightslategrey
+#ba9077 bej
+#1f2831 navbar
+#eeeeee gri
+*/
+.ribbon{
+    background: #f2fb96;
+    /*background: #e65861;*/
+    position: absolute;
+    right: -7px;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    top: 10px;
+    color:black;
+    /*font-weight: bold;*/
+    /*border-color: black;*/
+  /*border-bottom-color: black;*/
+}
+ .ribbon-b1{
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: 0px;
+    height: 8px;
+    border-width: 15px 10px 0px 0px;
+    border-right-color: #c7d8c6;
+    /*border-right-color: #6fc89a;*/
+    right: 50px;
+ }
+ .ribbon-b2{
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: 14.5px;
+    border-width: 0px 10px 16px 0px;
+    border-right-color: #c7d8c6;
+    /*border-right-color: rgb(188, 213, 209);*/
+    /*border-right-color: #6fc89a;*/
+    right: 50px;
+ }
+.ribbon-a {
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    bottom: -7px;
+    border-width: 0 0 7px 7px;
+    border-left-color: #222;
+    right: 0;
+}
+.shadow{
+    height: 30.56px;
+    width: 50px;
+    top: 0px;
+    z-index: 100;
+    position: absolute;
+    right: 0px;
+    box-shadow: 0px 4px 5px -3px;
+}
+.show-price{
+    background-color:#40a9ff;
+    border: 1px solid #40a9ff;
+    color:white;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+.show-price-button > button.ant-btn{
+    border-color:#40a9ff;
+    line-height: 5;
+    height:100%;
+    width:100%;
+    color:#40a9ff;
+    font-weight:bold;
+    border-radius: 0px;
+    position: relative;
+
+}
+.show-price-hidden{
+    display: none;
+    position: absolute;
+    background-color:white;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.show-price-button> button.ant-btn:hover > .show-price-hidden{
+    z-index: 2;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    color: 40a9ff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.show-price-button> button.ant-btn:active > .show-price-hidden{
+    display: flex;
+    z-index: 2;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    color: 40a9ff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.show-price-button> button.ant-btn:focus > .show-price-hidden{
+    display: flex;
+    height: 100%;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    color: 40a9ff;
+    font-size: 30px;
+    font-weight: bold;
+}

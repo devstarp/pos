@@ -1,0 +1,29 @@
+.auth-card{
+    background-color: #526372;
+    height: 60%;
+    width: 40%;
+    min-width: 400px;
+    max-width: 550px;
+    box-shadow: 5px 6px 2px #19242e;
+    margin:auto
+}
+.input-login{
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    margin-bottom: 5%;
+    border-radius: 0px
+}
+.input-login > .ant-input{
+    background: transparent;
+    color: white;
+    border:none;
+    
+}
+.logo-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10%;
+    color: white;
+    font-size: 8em;
+}

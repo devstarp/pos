@@ -1,0 +1,1382 @@
+{
+"info": {
+"_postman_id": "19941b54-d4eb-459e-8e73-fc01cbef1904",
+"name": "Calore API List",
+"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+},
+"item": [
+{
+"name": "Authentication",
+"item": [
+{
+"name": "Login",
+"id": "8642cae0-58e9-4366-9c1c-097cf1921fc4",
+"request": {
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "email",
+"value": "admin@calore.com",
+"type": "text"
+},
+{
+"key": "password",
+"value": "Beny@1234",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/login"
+},
+"response": []
+},
+{
+"name": "Register",
+"id": "0d8b4132-66ad-44da-8b32-e28c47ecd69b",
+"request": {
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "email",
+"value": "cashier@calore.com",
+"type": "text"
+},
+{
+"key": "password",
+"value": "Beny@1234",
+"type": "text"
+},
+{
+"key": "confirm_password",
+"value": "Beny@1234",
+"type": "text"
+},
+{
+"key": "name",
+"value": "Cashier Calore",
+"type": "text"
+},
+{
+"key": "role",
+"value": "2",
+"type": "text"
+},
+{
+"key": "phone",
+"value": "085725639268",
+"type": "text"
+},
+{
+"key": "address",
+"value": "Jl. Moh. Ismail RT. 005 RW. 010 No. 3",
+"type": "text"
+},
+{
+"key": "district_id",
+"value": "3171060",
+"type": "text"
+},
+{
+"key": "regencie_id",
+"value": "3171",
+"type": "text"
+},
+{
+"key": "province_id",
+"value": "31",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/register"
+},
+"response": []
+}
+],
+"id": "62aabdce-1712-4104-b1a9-62887603ac0e"
+},
+{
+"name": "User",
+"item": [
+{
+"name": "Get Profile",
+"id": "79521dd0-140b-479e-967a-e47e2b711fc9",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2MzgxOTU2NTEsImV4cCI6MTYzODI4MjA1MX0.XRKqKtv7coo--WtopfE8sFMDScKDAN7CUCgmvIP76S8"
+}
+},
+"method": "GET",
+"header": [],
+"url": "{{base_url}}/profile"
+},
+"response": []
+},
+{
+"name": "Update Profile",
+"id": "34b46f3d-6bfb-43dc-965b-3369bf8dc2e6",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2MzgyNTY0MzcsImV4cCI6MTYzODM0MjgzN30.ZR_z91zD9MgzAfAx-0-lNJV7-f6hG2eoTW9yLsgold8"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Admin Calore",
+"type": "text"
+},
+{
+"key": "status",
+"value": "1",
+"type": "text"
+},
+{
+"key": "phone",
+"value": "085725639268",
+"type": "text"
+},
+{
+"key": "address",
+"value": "Jl. Moh. Ismail RT. 005 RW. 010 No. 3",
+"type": "text"
+},
+{
+"key": "district_id",
+"value": "3171060",
+"type": "text"
+},
+{
+"key": "regencie_id",
+"value": "3171",
+"type": "text"
+},
+{
+"key": "province_id",
+"value": "31",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/profile"
+},
+"response": []
+},
+{
+"name": "[Admin] Update Profile",
+"id": "72c96a86-a328-4197-883f-ebcbbcfcd2cb",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE2MzgyNjI2NjMsImV4cCI6MTYzODM0OTA2M30.JBPf-j8TwJ7vu5LY1YUe4dmhhfrtKCvSTc4IaoOF9JE"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Cashier Calore",
+"type": "text"
+},
+{
+"key": "status",
+"value": "1",
+"type": "text"
+},
+{
+"key": "phone",
+"value": "085725639268",
+"type": "text"
+},
+{
+"key": "address",
+"value": "Jl. Moh. Ismail RT. 005 RW. 010 No. 3",
+"type": "text"
+},
+{
+"key": "district_id",
+"value": "3171060",
+"type": "text"
+},
+{
+"key": "regencie_id",
+"value": "3171",
+"type": "text"
+},
+{
+"key": "province_id",
+"value": "31",
+"type": "text"
+}
+]
+},
+"url": {
+"raw": "{{base_url}}/admin/profile?id=2",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"admin",
+"profile"
+],
+"query": [
+{
+"key": "id",
+"value": "2"
+}
+]
+}
+},
+"response": []
+}
+],
+"id": "b93771f9-367d-4042-ad83-0394258a1a67"
+},
+{
+"name": "Tax",
+"item": [
+{
+"name": "Get",
+"id": "8a0d4361-d5e1-4c66-8226-bf673355776c",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": []
+},
+"url": {
+"raw": "{{base_url}}/tax?search=&page&limit&status=2",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"tax"
+],
+"query": [
+{
+"key": "search",
+"value": ""
+},
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "status",
+"value": "2"
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "9cfb6eef-b37a-4860-8e95-51725207a585",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Pajak Konsumsi",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Pajak Konsumsi merupakan bagian dari PPN, yang bisa dikenakan atas setiap pertambahan nilai dari barang atau jasa dari produsen ke konsumen",
+"type": "text"
+},
+{
+"key": "percentage",
+"value": "10",
+"type": "text"
+},
+{
+"key": "type",
+"value": "2",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/tax/add"
+},
+"response": []
+},
+{
+"name": "Update",
+"id": "6a7a0c13-0ec8-4374-acaa-6b8e1c6abe0e",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Pajak Transaksi 2",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Pajak yang di peruntukan untuk transaksi akhir",
+"type": "text"
+},
+{
+"key": "percentage",
+"value": "5",
+"type": "text"
+},
+{
+"key": "type",
+"value": "2",
+"type": "text"
+}
+]
+},
+"url": {
+"raw": "{{base_url}}/tax/update/2",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"tax",
+"update",
+"2"
+],
+"query": [
+{
+"key": "id",
+"value": "2",
+"disabled": true
+}
+]
+}
+},
+"response": []
+}
+],
+"id": "aa2b48e6-d98f-45e4-8057-7c0251ea79c8"
+},
+{
+"name": "Discount",
+"item": [
+{
+"name": "Get",
+"id": "ba32c869-f8b3-491d-87e7-2b796b69d4c6",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": []
+},
+"url": {
+"raw": "{{base_url}}/discount?search=&page&limit&status=1&type=2",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"discount"
+],
+"query": [
+{
+"key": "search",
+"value": ""
+},
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "status",
+"value": "1"
+},
+{
+"key": "type",
+"value": "2"
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "19948fa9-2af3-419c-a057-a08712075e2c",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Diskon Meals",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Pilih makananmu bayar sesukamu",
+"type": "text"
+},
+{
+"key": "percentage",
+"value": "5",
+"type": "text"
+},
+{
+"key": "type",
+"value": "2",
+"type": "text"
+},
+{
+"key": "date_from",
+"value": "2021-12-01",
+"type": "text"
+},
+{
+"key": "date_to",
+"value": "2021-12-30",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/discount/add"
+},
+"response": []
+},
+{
+"name": "Update",
+"id": "5bbb64b6-a99c-4327-a5cd-e2b7b0be3a9d",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Pajak Transaksi",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Pajak yang di peruntukan untuk transaksi akhir",
+"type": "text"
+},
+{
+"key": "percentage",
+"value": "5",
+"type": "text"
+},
+{
+"key": "type",
+"value": "2",
+"type": "text"
+},
+{
+"key": "date_from",
+"value": "2021-12-02",
+"type": "text"
+},
+{
+"key": "date_to",
+"value": "2021-12-09",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/discount/update/1"
+},
+"response": []
+}
+],
+"id": "475bb4cb-66b1-4ce3-8403-1c9f2d89aa5a"
+},
+{
+"name": "Uom",
+"item": [
+{
+"name": "Get",
+"id": "9b5202d7-1861-470d-a9fc-c753d3b0bd89",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": []
+},
+"url": {
+"raw": "{{base_url}}/uom?search=&page&limit&status=",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"uom"
+],
+"query": [
+{
+"key": "search",
+"value": ""
+},
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "status",
+"value": ""
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "bfd287c9-2f8b-4871-87cf-acfdf34575c9",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Small",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/uom/add"
+},
+"response": []
+},
+{
+"name": "Update",
+"id": "bb5d35eb-cc58-4227-9b61-3b5864fc726e",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Small",
+"type": "text"
+},
+{
+"key": "status",
+"value": "1",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/uom/update/1"
+},
+"response": []
+}
+],
+"id": "b26865fb-d925-4645-8a81-1716439412fd"
+},
+{
+"name": "Variety",
+"item": [
+{
+"name": "Get",
+"id": "1be2e485-b6b6-46d5-b856-f46ef025a1df",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": []
+},
+"url": {
+"raw": "{{base_url}}/variety?search=&page&limit&status=",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"variety"
+],
+"query": [
+{
+"key": "search",
+"value": ""
+},
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "status",
+"value": ""
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "96d498da-db6b-4a0c-a949-451fd7c647da",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Cold",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/variety/add"
+},
+"response": []
+},
+{
+"name": "Update",
+"id": "d961f728-bc30-4910-ac3f-ca094793a3a9",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Bakar",
+"type": "text"
+},
+{
+"key": "status",
+"value": "1",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/variety/update/3"
+},
+"response": []
+}
+],
+"id": "8359119e-f944-4856-9cc2-7bb900127711"
+},
+{
+"name": "Category",
+"item": [
+{
+"name": "Get",
+"id": "530a349c-2da3-46c5-b6b5-f981d15253fe",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": []
+},
+"url": {
+"raw": "{{base_url}}/category?search=&page&limit&status=2",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"category"
+],
+"query": [
+{
+"key": "search",
+"value": ""
+},
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "status",
+"value": "2"
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "6b2faa9e-65e0-4c9a-bd4b-ff7d44e8e4f3",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Cake",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Segala jenis cake yang tersedia di Calore Eats",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/category/add"
+},
+"response": []
+},
+{
+"name": "Update",
+"id": "07f373b4-8f97-4dd3-bbaf-bcc2f01193d7",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "name",
+"value": "Cake",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Segala jenis cake terkini dan kekinian",
+"type": "text"
+}
+]
+},
+"url": "{{base_url}}/category/update/1"
+},
+"response": []
+}
+],
+"id": "1d4d4c03-9fd2-4b75-ade1-407014a64806"
+},
+{
+"name": "Address",
+"item": [
+{
+"name": "Province",
+"id": "f4ae30ea-2bd4-4007-ace9-d23c29dcceeb",
+"request": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{base_url}}/province?search=Jawa",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"province"
+],
+"query": [
+{
+"key": "search",
+"value": "Jawa"
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Regency",
+"id": "98e25afb-bdb3-413e-a5c1-7cfa0d4a912b",
+"request": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{base_url}}/regency?search=Bogor&province_id=32",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"regency"
+],
+"query": [
+{
+"key": "search",
+"value": "Bogor"
+},
+{
+"key": "province_id",
+"value": "32"
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "District",
+"id": "f99c7e56-9e50-48ea-8c65-7f7441e04261",
+"request": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{base_url}}/district?search=Bogor&regency_id=3271",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"district"
+],
+"query": [
+{
+"key": "search",
+"value": "Bogor"
+},
+{
+"key": "regency_id",
+"value": "3271"
+}
+]
+}
+},
+"response": []
+}
+],
+"id": "e64955aa-8918-4b8a-a572-8dd27b9d3aee"
+},
+{
+"name": "Product",
+"item": [
+{
+"name": "Get",
+"id": "a5d2ee93-02f9-46f6-9378-c4aec48aac69",
+"protocolProfileBehavior": {
+"disableBodyPruning": true
+},
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"body": {
+"mode": "urlencoded",
+"urlencoded": [
+{
+"key": "page",
+"value": "",
+"type": "text"
+},
+{
+"key": "limit",
+"value": "",
+"type": "text"
+},
+{
+"key": "search",
+"value": "Espresso",
+"type": "text"
+},
+{
+"key": "status",
+"value": "",
+"type": "text"
+}
+]
+},
+"url": {
+"raw": "{{base_url}}/product?page&limit&search=&status&category_id=",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"product"
+],
+"query": [
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "search",
+"value": ""
+},
+{
+"key": "status",
+"value": null
+},
+{
+"key": "category_id",
+"value": ""
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "cb6f15e4-0546-45e7-988f-c5135c8f6c55",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "formdata",
+"formdata": [
+{
+"key": "name",
+"value": "Baileys Coffee",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Baileys Irish Cream adalah minuman alkohol terlaris di dunia. Sebab rasanya mani seperti susu dan hadirkan sentuhan rasa cokelat",
+"type": "text"
+},
+{
+"key": "unit_in_stock",
+"value": "50",
+"type": "text"
+},
+{
+"key": "unit_price",
+"value": "37000",
+"type": "text"
+},
+{
+"key": "category_id",
+"value": "4",
+"type": "text"
+},
+{
+"key": "image",
+"type": "file",
+"src": "/D:/Portofolio/Calore/calore-backend/uploads/image-9283306902162.jpg"
+}
+]
+},
+"url": {
+"raw": "{{base_url}}/product/add",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"product",
+"add"
+],
+"query": [
+{
+"key": "name",
+"value": null,
+"disabled": true
+},
+{
+"key": "descripti",
+"value": null,
+"disabled": true
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Upate",
+"id": "abc661ea-d7d6-433b-9129-877f81a2993d",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "formdata",
+"formdata": [
+{
+"key": "name",
+"value": "Affogato Cookies",
+"type": "text"
+},
+{
+"key": "description",
+"value": "Makanan penutup berbasis kopi Italia berbentuk sesendok rasa susu biasa atau gelato vanilla atau es krim di atasnya atau dengan segelas espresso panas",
+"type": "text"
+},
+{
+"key": "unit_in_stock",
+"value": "50",
+"type": "text"
+},
+{
+"key": "unit_price",
+"value": "50000",
+"type": "text"
+},
+{
+"key": "uom_id",
+"value": "4",
+"type": "text"
+},
+{
+"key": "category_id",
+"value": "3",
+"type": "text"
+},
+{
+"key": "image",
+"type": "file",
+"src": "/C:/Users/Arian Derida/Downloads/Gigma/privy/Boozy-Affogato.jpg"
+}
+]
+},
+"url": {
+"raw": "{{base_url}}/product/update/7",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"product",
+"update",
+"7"
+],
+"query": [
+{
+"key": "name",
+"value": null,
+"disabled": true
+},
+{
+"key": "descripti",
+"value": null,
+"disabled": true
+}
+]
+}
+},
+"response": []
+}
+],
+"id": "94e63bae-9ada-4e29-80d2-1dcd095482fa"
+},
+{
+"name": "Order",
+"item": [
+{
+"name": "Get",
+"id": "2ee84281-3b85-487d-beff-b94dddec3cb0",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{base_url}}/order?page&limit&order_number&search&status&type",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"order"
+],
+"query": [
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "order_number",
+"value": null
+},
+{
+"key": "search",
+"value": null
+},
+{
+"key": "status",
+"value": null
+},
+{
+"key": "type",
+"value": null
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Get Order Detail",
+"id": "128a6388-b90a-431e-92f3-3ca2bc80a848",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "GET",
+"header": [],
+"url": {
+"raw": "{{base_url}}/order/detail/1?page&limit&search",
+"host": [
+"{{base_url}}"
+],
+"path": [
+"order",
+"detail",
+"1"
+],
+"query": [
+{
+"key": "page",
+"value": null
+},
+{
+"key": "limit",
+"value": null
+},
+{
+"key": "search",
+"value": null
+}
+]
+}
+},
+"response": []
+},
+{
+"name": "Add",
+"id": "849bf744-9d96-46c4-b8cc-8f88e931293b",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "POST",
+"header": [],
+"body": {
+"mode": "raw",
+"raw": "{\r\n    \"name\": \"Dava Septian\",\r\n    \"type\": 1,\r\n    \"remark\": null,\r\n    \"reason\": null,\r\n    \"tax_id\": 1,\r\n    \"discount_id\": 1,\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"uom_id\": 1,\r\n            \"variety_id\": 1,\r\n            \"qty\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"uom_id\": 2,\r\n            \"variety_id\": 2,\r\n            \"qty\": 2\r\n        }\r\n    ]\r\n}",
+"options": {
+"raw": {
+"language": "json"
+}
+}
+},
+"url": "{{base_url}}/order/add"
+},
+"response": []
+},
+{
+"name": "Update",
+"id": "479eeedd-dbfd-467f-9002-740b803cd43d",
+"request": {
+"auth": {
+"type": "bearer",
+"bearer": {
+"token": "{{base_token}}"
+}
+},
+"method": "PATCH",
+"header": [],
+"body": {
+"mode": "raw",
+"raw": "{\r\n    \"name\": \"Davax Septian\",\r\n    \"type\": 1,\r\n    \"remark\": null,\r\n    \"reason\": null,\r\n    \"tax_id\": 1,\r\n    \"discount_id\": 1,\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"uom_id\": 1,\r\n            \"variety_id\": 1,\r\n            \"qty\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"uom_id\": 2,\r\n            \"variety_id\": 2,\r\n            \"qty\": 2\r\n        }\r\n    ]\r\n}",
+"options": {
+"raw": {
+"language": "json"
+}
+}
+},
+"url": "{{base_url}}/order/update/1"
+},
+"response": []
+}
+],
+"id": "5d6ebb9f-da5c-4d6d-9bd3-5cf033b8733d"
+},
+{
+"name": "Test Connection",
+"id": "d7abf87b-5368-4296-b9f4-001033e06b68",
+"request": {
+"method": "GET",
+"header": [],
+"url": "{{base_url}}/hello"
+},
+"response": []
+}
+]
+}
